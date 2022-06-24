@@ -1,0 +1,705 @@
+<DOCTYPE! html>
+<meta name="author" content="Forrest"
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<head><title>empty practices</title>
+<style>
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;   
+  color:white;
+  
+}
+
+.header-container{                /*HEADER*/
+  background: goldenrod;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+  
+  min-height: 8vh;
+  max-width: 100vw;
+}
+
+.home-about-box{
+  display: flex;
+  margin-left: 50px;
+  gap: 25px;
+  min-height: 90%;
+  font-size: 28px;
+  padding: 5px;
+  max-width: 250px;
+
+}
+
+.home{
+  background: gray;
+  border: 4px solid white;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.home-img{
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.about{
+  background: gray;
+  border: 4px solid white;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 200px;
+  min-width: fit-content;
+  min-height: 100%;
+
+   
+}
+
+.main-container{            /*NAV AND MAP TOGETHER*/
+  
+  display: flex;
+  justify-content: start;
+
+  max-width:100vw;
+  min-height:100vh;
+
+  gap: 15px;
+  padding: 15px 15px;
+
+  background: linear-gradient(90deg, rgba(244,242,218,1) 1%, rgba(249,249,249,0.9054972330729166) 98%);
+
+}
+
+.nav-container{
+  min-width: 275px;
+  max-width: 360px;
+  max-height: 90vh;
+
+}
+
+
+.nav{
+  background: rgb(71,71,139);
+  background: linear-gradient(180deg, rgba(71,71,139,1) 0%, rgba(219,219,219,0.9054972330729166) 98%);
+  box-shadow: 4px 3px 10px hsl(0, 12%, 12%, 0.48);
+  
+  max-width: 100%;
+  max-height: 100%;
+
+  overflow-y: scroll;
+
+  display:flex;
+  flex-direction:column;
+
+  list-style-type: none;
+  
+  margin: 0;
+ 
+  border-left: 8px solid #362d47;
+  border-top: 8px solid #695c83;
+  border-right: 8px solid #695c83;
+  border-bottom: 8px solid #695c83;
+  border-bottom-right-radius: 5px;
+
+}
+
+.nav::-webkit-scrollbar{
+  width: 8px;
+}
+
+.nav::-webkit-scrollbar-track{
+  width: 15px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+
+.nav::-webkit-scrollbar-thumb{
+  background-color: black;
+  border-radius: 15px;
+}
+
+.country-holder{
+  
+  display: flex;
+  flex-direction:column;
+  gap: 25px;
+
+  font-size: clamp(36px, 52px, 75px);
+  text-shadow: 4px 4px 3px black;
+
+  
+
+  max-height: 100%;
+  max-width: 100%;
+  
+}
+
+
+
+.region{
+  font-size: clamp(25px, 75px, 85px);
+  text-align: center;
+  
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: left;
+  text-shadow: 4px 4px 8px black;
+  border-bottom: 8px solid white;
+  border-top: 8px solid white;
+
+  min-height: 175px;
+  min-width: 100%;
+  
+  display:flex;
+  place-items: center;
+  background: gray;
+
+  box-shadow: 3px 3px 12px hsl(0, 12%, 12%, 0.85);
+
+  display: flex;
+  place-items: center;
+}
+
+.africa{
+  margin-bottom: 10px;
+  background: linear-gradient(68deg, rgba(240,46,33,0.6982143199076505) 19%, rgba(0,0,0,0.6001751042213761) 50%, rgba(45,154,61,0.7206232834930848) 82%);
+  margin-top: 0px;
+}
+
+.americas{
+  font-size: clamp(25px, 60px, 75px);
+  background: linear-gradient(68deg, rgba(113,159,144,0.6674019949776786) 19%, rgba(237,139,32,0.6954131994594712) 50%, rgba(102,52,52,0.7570378493194152) 82%);
+
+}
+
+.asia{
+  background: linear-gradient(68deg, rgba(30,48,55,0.8130602582830007) 19%, rgba(198,143,97,0.7346288857339811) 50%, rgba(240,236,192,0.7206232834930848) 82%);
+}
+
+.europe{
+  background: linear-gradient(68deg, rgba(32,62,95,0.7122199221485469) 19%, rgba(254,229,177,0.6449930313922444) 50%, rgba(234,234,234,0.7514356084230567) 82%);
+}
+
+.oceania{
+  background: linear-gradient(68deg, rgba(98,194,221,0.7122199221485469) 19%, rgba(23,43,148,0.6786064767703957) 50%, rgba(129,229,216,0.7206232834930848) 82%);
+  font-size: clamp(25px, 65px, 75px);
+}
+
+.country-name{
+  border-left: 8px solid white;
+  border-bottom: 8px solid #67678c;;
+  border-bottom-right-radius: 25px;
+
+
+  background: linear-gradient(45deg, rgba(103,103,140,1) 1%, rgba(219,219,219,0.8914916308320203) 98%, rgba(103,103,140,1) 100%);
+  
+  padding: 10px;
+  
+  min-width: fit-content;
+  max-width: max-content;
+
+  box-shadow: 0px 4px 8px hsl(0, 12%, 12%);
+  
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+
+.country-name:hover{
+  cursor: pointer;
+}
+
+.content{
+
+  background: linear-gradient(270deg, rgba(230,230,230,0.8550770650056898) 0%, rgba(198,237,255,0.7318277652858018) 100%);
+  box-shadow: 4px 2px 12px hsl(0, 12%, 12%);
+
+
+  min-width: 65vw;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.map-container{
+  background: maroon;
+  
+  min-height:600px;
+  min-width: 100%;
+
+  align-self: center;
+  
+}
+
+.map{
+  min-width: 100%;
+  min-height: 100%;
+  background: darkgray;
+
+
+}
+
+.info-container{             /* SECTION BELOW MAP */
+  background: darkgreen;
+  border: 4px solid purple; 
+  min-width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 15px;
+
+  box-shadow: 3px 3px 10px hsl(0, 12%, 12%, 0.4);
+
+}
+
+.about-heading{
+  text-align: center;
+  font-size: 32px;
+  padding: 5px;
+}
+
+.topic-box{
+  border-top: 2px solid lightblue; 
+  border-left: 5px solid gray;
+  border-bottom: 2px solid lightblue;
+}
+
+.topic-title{
+  margin-left: 10px; 
+  color:black; 
+}
+
+.topic-description{
+  margin-left: 10px; 
+}
+
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+
+</head>
+
+  <body>
+    
+  <header class='header-container'>
+    <div class='home-about-box'>
+      <div class='home'> <img class='home-img' src='https://www.svgrepo.com/show/22031/home-icon-silhouette.svg'></div>
+      <div class='about'> About </div>
+    </div>
+  </header>
+
+  <main class='main-container'>
+    <nav class='nav-container'>
+      <ul class='nav'>
+        <li class='region-name'>
+          <div class='country-holder africa-country-holder'>
+            <h2 class='region africa'> Africa </h2>
+          </div>
+          <div class='country-holder americas-country-holder'>
+            <h2 class='region americas'> Americas</h2>
+          </div>
+          <div class='country-holder asia-country-holder'>
+            <h2 class='region asia'> Asia</h2>
+          </div>
+          <div class='country-holder europe-country-holder'>
+            <h2 class='region europe'> Europe</h2>
+          </div>
+          <div class='country-holder oceania-country-holder'>
+            <h2 class='region oceania' > Oceania</h2>
+          </div>
+          <div class='country-holder others-country-holder'>
+            <h2 class='region other'> Others </h2>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section class='content'>
+      <div class='map-container'>
+        <div class='map' id='map'></div>
+      </div>
+      <div class='info-container'>
+          <h1 class='about-heading'>About ${name}</h1>
+        
+          <div class='topic-box topic-box-1'>
+          <h2 class='topic-title'>topic 1</h2>
+          <p class='topic-description'>sdfgsdfgsdfgsdfgsf</p>
+        </div>
+        <div class='topic-box topic-box-2'>
+          <h2 class='topic-title'>topic 2</h2>
+          <p class='topic-description'>sdfgsdfgsdfgsdfgsf</p>
+        </div>
+        <div class='topic-box topic-box-3'>
+          <h2 class='topic-title'>topic 3</h2>
+          <p class='topic-description'>sdfgsdfgsdfgsdfg</p>
+        </div>
+        <div class='topic-box topic-box-4'>
+          <h2 class='topic-title'></h2>
+          <p class='topic-description'></p>
+        </div>
+        <div class='topic-box topic-box-5'>
+          <h2 class='topic-title'></h2>
+          <p class='topic-description'></p>
+        </div>
+        <div class='topic-box topic-box-6'>
+          <h2 class='topic-title'></h2>
+          <p class='topic-description'></p>
+        </div>
+        <div class='topic-box topic-box-7'>
+          <h2 class='topic-title'></h2>
+          <p class='topic-description'></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script>
+
+// INITIAL VARIABLES
+
+const headerContainer = document.querySelector('.header-container');
+const infoContainer = document.querySelector('.info-container');
+const mainContainer = document.querySelector('.main-container');
+const navContainer = document.querySelector('.nav-container');
+const nav = document.querySelector('.nav');
+const mapContainer = document.querySelector('.map-container');
+
+africaCountryContainer = document.querySelector('.africa-country-holder');
+americasCountryContainer = document.querySelector('.americas-country-holder');
+asiaCountryContainer = document.querySelector('.asia-country-holder');
+europeCountryContainer = document.querySelector('.europe-country-holder');
+oceaniaCountryContainer = document.querySelector('.oceania-country-holder');
+otherCountryContainer = document.querySelector('.others-country-holder');
+
+
+
+
+
+
+
+
+///////////////////////////////////// APP CLASS ///////////////////////////////////////
+
+class App {
+  
+  map;
+
+  constructor(){
+  
+  // get user position for initial map rendering
+    this.getPosition();
+  
+
+     
+  }
+
+ 
+/////////////////////////////////////// METHODS ////////////////////////////////////
+
+  getPosition(){
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(this.loadMap.bind(this), this.onError.bind(this));
+    }
+  }
+
+/////////////////////////////////////
+
+  onError(){
+    alert('Geolocation has been either denied or is not supported by this browser!')
+  }
+
+//////////////////////////////////////
+
+  loadMap(position){
+    console.log('Geolocation has been allowed and is active!');
+  
+    // getting coordinates
+    const coords = [position.coords.latitude, position.coords.longitude];
+
+
+   
+    // build and render map
+ 
+    // initialize the map on the "map" div with a given center and zoom
+
+ 
+    this.map = L.map('map').setView(coords, 4.1);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(this.map);
+
+   
+    // after map renders - do api call
+    
+      this.getCountriesData();
+    
+   
+  }
+
+
+
+/////////////////////////////////////////
+
+  getCountriesData(){
+    const request = new XMLHttpRequest();
+   
+    request.open('GET', 'https://restcountries.com/v2/all');
+    
+    request.send();
+  
+    request.addEventListener('load', function(){
+   
+      const countryInformation = [];
+
+      const [...data] = JSON.parse(this.responseText);
+      
+      // convert to array
+      const countriesInfo = Object.entries(data);
+      
+      const info = countriesInfo.flatMap(el => el[1]);
+      
+      // push new info to new array for reference
+      countryInformation.push(info);
+
+      const countriesArray = countryInformation.flat();
+
+      // build HTML for NAV
+      //5 regions: Africa, Americas, Asia, Europe, Oceania
+
+      //make reference arrays for each region?
+  
+      const africa = [];
+      const americas = [];
+      const asia = [];
+      const europe = [];
+      const oceania = [];
+      const other = [];
+
+
+      // if country belongs to certain region - push to that array
+
+      countriesArray.forEach(country => {
+        if(country.region === 'Africa') {africa.push(country);}
+        if(country.region === 'Americas') {americas.push(country);}
+        if(country.region === 'Asia') {asia.push(country);}
+        if(country.region === 'Europe') {europe.push(country);}
+        if(country.region === 'Oceania') {oceania.push(country);}
+        if(country.region !== 'Africa' && country.region !== 'Oceania' && country.region !== 'Europe' && 
+          country.region !== 'Asia' && country.region !== 'Americas' && country.region !== 'Africa') {other.push(country);}
+      });
+
+       console.log(africa, americas, asia, europe, oceania, other);
+
+     
+
+///////build country name links HTML for NAV and insert: //////////////////////////////////////////////////////////////////
+      
+      // AFRICA
+      
+      africa.forEach(country => {
+        let navHTML = `
+           <p class='country-name'>${country.name}</p>
+        `;
+        africaCountryContainer.insertAdjacentHTML('beforeend', navHTML);
+      });
+
+      // AMERICAS
+      
+      americas.forEach(country => {
+        let navHTML2 = `
+           <p class='country-name'>${country.name}</p>
+        `;
+        americasCountryContainer.insertAdjacentHTML('beforeend', navHTML2);
+      });
+
+      // ASIA
+      
+      asia.forEach(country => {
+        let navHTML3 = `
+           <p class='country-name'>${country.name}</p>
+        `;
+        asiaCountryContainer.insertAdjacentHTML('beforeend', navHTML3);
+      });
+
+      // EUROPE
+      
+      europe.forEach(country => {
+        let navHTML4 = `
+           <p class='country-name'>${country.name}</p>
+        `;
+        europeCountryContainer.insertAdjacentHTML('beforeend', navHTML4);
+      });
+
+      // OCEANIA
+      
+      oceania.forEach(country => {
+        let navHTML5 = `
+           <p class='country-name'>${country.name}</p>
+        `;
+        oceaniaCountryContainer.insertAdjacentHTML('beforeend', navHTML5);
+      });
+
+      // OTHERS
+      
+      other.forEach(country => {
+        let navHTML6 = `
+           <p class='country-name'>${country.name}</p>
+        `;
+        otherCountryContainer.insertAdjacentHTML('beforeend', navHTML6);
+      });
+
+      
+
+ //////// EVENT DELEGATION FOR EACH COUNTRY IN LIST ////////////////////
+        
+        nav.addEventListener('click', function(e){
+        
+        if(e.target.classList.contains('country-name')){
+
+          // GET SELECTED COUNTRY
+          const clicked = e.target;
+          const selectedCountry = countriesArray.find(el => el.name === clicked.textContent)
+
+          console.log(selectedCountry);
+
+          // RENDER LOCATION ON MAP
+             const selectedCountryCoords = [selectedCountry.latlng[0], selectedCountry.latlng[1]];
+             
+             map.remove();
+   
+             const mapHtml = `<div class='map' id='map'></div></div>`;
+             mapContainer.insertAdjacentHTML('beforeend', mapHtml);
+          
+
+             
+  
+             const renderMap = function(coords){
+    const map = L.map('map').setView(coords, 4.1);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+             }
+      
+             renderMap(selectedCountryCoords);
+
+          // POPULATE FIELDS WITH DATA
+        }
+   
+        if(!e.target.classList.contains('country-name')){
+          return;
+        }
+   
+        });
+
+
+
+
+
+
+
+
+
+      // build HTML for info container 
+
+    });
+
+
+  }
+
+
+//////////////////////////////////////////////
+
+
+
+  handleCountryClick(){
+
+  // user clicks country name -> map needs to render to country location
+
+  
+
+  // corresponding data needs to populate into info-container
+
+  }
+
+/////////////////////////////////////////
+
+  handleHomeClick(){}
+
+////////////////////////////////////////
+  
+  handleAboutClick(){}
+
+
+
+
+
+
+
+}
+
+
+const app = new App();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
