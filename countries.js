@@ -313,10 +313,15 @@ class App {
     const aboutContent = document.querySelector(".about-project-section");
     const flagsContent = document.querySelector(".flags-section");
     const flagsContainer = document.querySelector(".flags-container");
+    const homeBtn = document.querySelector(".home");
 
     // ABOUT BUTTON
 
     const handleAboutClick = function () {
+
+      mainContainer.style.display = 'none';
+      aboutContent.classList.remove('hidden');
+
       console.log(flagsContainer.children);
 
       navContainer.classList.toggle("fade-away");
@@ -337,10 +342,7 @@ class App {
 
       flagsContainer.style.display = "none";
 
-      flagsBtn.addEventListener("click", function () {
-        flagsContainer.style.display = "flex";
-        aboutContent.style.display = "none";
-      });
+
     };
 
     aboutBtn.addEventListener("click", handleAboutClick);
@@ -348,10 +350,15 @@ class App {
     // FLAGS BUTTON
 
     const handleFlagsClick = function () {
-      flagsBtn.removeEventListener("click", handleFlagsClick);
-      aboutContent.style.display = "none";
-      flagsContent.style.display = "flex";
 
+        mainContainer.style.display = 'none';
+        flagsContainer.style.display = 'flex';
+
+      
+        aboutContent.style.display = "none";
+        flagsContent.style.display = "flex";
+ 
+        
       navContainer.classList.toggle("fade-away");
       mainContainer.classList.toggle("fade-away");
 
@@ -403,7 +410,28 @@ class App {
     };
 
     flagsBtn.addEventListener("click", handleFlagsClick);
+    
+
+    // HANDLE HOME 
+
+    const handleHomeClick = function(){
+      mainContainer.style.opacity = 1;
+      mainContainer.style.display = 'flex';
+      navContainer.classList.remove("fade-away");
+      mainContainer.classList.remove("fade-away");
+      navContainer.classList.remove("hidden");
+      mainContainer.classList.remove("hidden");
+
+      aboutContent.style.display='none';
+      flagsContent.style.display = 'none';
+
+      console.log('home click');
+    }
+
+    homeBtn.addEventListener('click', handleHomeClick);
   };
+
+  
 
   ////////////////////////////////////////
 
