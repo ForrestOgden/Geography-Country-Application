@@ -1,0 +1,118 @@
+<DOCTYPE! html>
+<meta name="author" content="Forrest"
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<head><title>empty practices</title>
+
+<link rel='stylesheet' href='countries.css'>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+
+<script defer src='countries.js'></script>
+
+</head>
+
+  <body>
+    
+  <header class='header-container'>
+    <div class='home-about-box'>
+      <div class='home'> <img class='home-img' src='https://www.svgrepo.com/show/22031/home-icon-silhouette.svg'></div>
+      <div class='about'> About </div>
+      <div class='flags-box'> Flags</div>
+    </div>
+    <div class='app-name'>
+      <h1 class='app-name-text'>WorldData</h1>
+    </div>
+  </header>
+
+  <main class='main-container'>
+    <nav class='nav-container'>
+      <ul class='nav'>
+        <li class='region-name'>
+          <div class='country-holder africa-country-holder'>
+            <h2 class='region africa'> Africa </h2>
+          </div>
+          <div class='country-holder americas-country-holder'>
+            <h2 class='region americas'> Americas</h2>
+          </div>
+          <div class='country-holder asia-country-holder'>
+            <h2 class='region asia'> Asia</h2>
+          </div>
+          <div class='country-holder europe-country-holder'>
+            <h2 class='region europe'> Europe</h2>
+          </div>
+          <div class='country-holder oceania-country-holder'>
+            <h2 class='region oceania' > Oceania</h2>
+          </div>
+          <div class='country-holder others-country-holder'>
+            <h2 class='region other'> Others </h2>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section class='content'>
+      <div class='map-container'>
+        <div class='map' id='map'></div>
+      </div>
+      <div class='info-container'>
+          <h1 class='about-heading'>Select a country!</h1>
+        
+          <div class='topic-box topic-box-1'>
+          <h2 class='topic-title capital'>Capital city</h2>
+          <p class='topic-description capital-text'></p>
+        </div>
+        <div class='topic-box topic-box-2'>
+          <h2 class='topic-title population'>Population</h2>
+          <p class='topic-description population-text'></p>
+        </div>
+        <div class='topic-box topic-box-3'>
+          <h2 class='topic-title title-region'>Region</h2>
+          <p class='topic-description region-text'></p>
+          <h2 class='topic-title'>Subregion</h2>
+          <p class='topic-description subregion-text'></p>
+        </div>
+        <div class='topic-box topic-box-4'>
+          <h2 class='topic-title language'>Language</h2>
+          <p class='topic-description language-text'></p>
+        </div>
+        <div class='topic-box topic-box-5'>
+          <h2 class='topic-title currency'>Currency</h2>
+          <p class='topic-description currency-text'></p>
+        </div>
+        <div class='topic-box topic-box-6'>
+          <h2 class='topic-title flag'>Flag</h2>
+          <div class='topic-description flag-text'>
+            <img class="flag-img" src="" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="about-project-section">
+    <div class="about-page">
+      <div class="about-content">
+      <h1 class="about-project-heading">About WorldData:</h1>
+    </div>
+    <div class="about-page2">
+      <div class="about-content2">
+      <p class="about-text">WorldData is a project built by Forrest Ogden using the Rest Countries API. <br><br>
+      The application can serve as a geography project-helper, and overall general resource for instant access to country information. <br><br>
+      You can click on any country and get the following information: capital city, population, region, subregion, language, currency, and flag! <br><br>
+      You should also be able to click anywhere on the map and get the closest relevant-country's data populated. <br><br>
+      Thanks for visitng! -Forrest
+      </p>
+    </div>
+    
+    </div>
+  </section>
+
+  <section class="flags-section">
+    <div class="flags-container">
+    </div>
+  </section>
+
+ </body>
+
+</html>
