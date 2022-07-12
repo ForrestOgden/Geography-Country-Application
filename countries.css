@@ -73,6 +73,8 @@ body {
   max-width: min-content;
   min-height: 100%;
   box-shadow: 4px 2px 12px hsl(0, 12%, 12%, 0.5);
+
+  font-size: clamp(16px, 32px, 50px);
 }
 
 .about:hover {
@@ -93,6 +95,7 @@ body {
   min-width: fit-content;
   min-height: 100%;
   box-shadow: 4px 2px 12px hsl(0, 12%, 12%, 0.5);
+  font-size: clamp(16px, 32px, 50px);
 }
 
 .flags-box:hover {
@@ -133,7 +136,7 @@ body {
 
 .nav-container {
   max-width: 320px;
-  max-height: 90vh;
+  max-height: 75vh;
 }
 
 .nav {
@@ -302,7 +305,7 @@ body {
   box-shadow: 4px 2px 12px hsl(0, 12%, 12%);
 
   min-width: 60vw;
-  max-height: 90vh;
+  min-height: 85vh;
 
   display: flex;
   flex-direction: column;
@@ -312,7 +315,7 @@ body {
 .map-container {
   background: maroon;
 
-  min-height: 48%;
+  min-height: 40%;
   min-width: 100%;
 
   align-self: center;
@@ -342,7 +345,7 @@ body {
 
   max-width: 90%;
   min-height: 250px;
-  max-height: max-content;
+  max-height: 48vh;
   overflow-y: scroll;
 
   display: flex;
@@ -376,7 +379,7 @@ body {
   text-align: center;
   font-size: clamp(32px, 60px, 65px);
   padding: 10px 25px;
-  max-width: max-content;
+  max-width: 100%;
   text-shadow: 4px 2px 8px hsl(0, 15%, 15%, 0.9);
 }
 
@@ -638,7 +641,6 @@ body {
   background: lightgray;
   padding: 15px;
   border-radius: 20px;
-  box-shadow: 5px 5px 14px hsl(0, 12%, 12%, 0.5);
 }
 
 /*ANIMATIONS*/
@@ -670,131 +672,3 @@ body {
 }
 
 /*MEDIA QUERY -----------------------------------------------------------------------------*/
-
-@media screen and (min-width: 800px) {
-  .header-container {
-    min-height: 8vh;
-    max-width: 100vw;
-  }
-
-  .main-container {
-    max-width: 100vw;
-    max-height: 100vh;
-    min-width: 100%;
-
-    gap: 50px;
-    padding: 25px;
-  }
-
-  .nav-container {
-    max-width: 25%;
-    max-height: 80vh;
-  }
-
-  .nav {
-    min-height: 100%;
-    min-width: 100%;
-  }
-
-  .region-name {
-    min-width: 100%;
-  }
-
-  .country-name {
-    font-size: clamp(28px, 32px, 45px);
-  }
-
-  .country-holder {
-    min-height: 100%;
-    min-width: 100%;
-  }
-
-  .region {
-    font-size: clamp(25px, 55px, 70px);
-    min-height: 190px;
-    min-width: 100%;
-  }
-
-  .content {
-    max-height: 85vh;
-    min-width: 70%;
-    max-width: 80%;
-  }
-
-  .map-container {
-    min-height: 500px;
-  }
-
-  .about-heading {
-    text-align: center;
-    font-size: clamp(32px, 70px, 85px);
-    max-width: 100%;
-    text-shadow: 4px 2px 8px hsl(0, 15%, 15%, 0.9);
-  }
-
-  .topic-box {
-    min-height: fit-content;
-    max-width: 70vw;
-  }
-
-  .topic-title {
-    color: black;
-    font-size: clamp(44px, 58px, 75px);
-  }
-
-  .topic-description {
-    margin-left: 10px;
-    font-size: clamp(22px, 50px, 65px);
-    text-shadow: 4px 2px 8px hsl(0, 15%, 15%, 0.9);
-  }
-
-  .flag-img {
-    max-width: 75%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  .about-page {
-    max-width: 950px;
-  }
-}
-
-@media only screen and (max-device-width: 775px) {
-  .header-container {
-    min-height: 8vh;
-    min-width: 100vw;
-  }
-
-  .app-name {
-    margin-right: 040px;
-  }
-
-  .map-container {
-    max-width: 100%;
-  }
-
-  .main-container {
-    max-height: 100%;
-
-    gap: 25px;
-    padding: 20px 20px;
-  }
-
-  .nav-container {
-    max-width: 280px;
-    max-height: 65vh;
-  }
-
-  .content {
-    min-width: 40vw;
-    max-width: 65vw;
-  }
-
-  .about {
-    font-size: 36px;
-  }
-
-  .flags-box {
-    font-size: 36px;
-  }
-}
