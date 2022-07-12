@@ -375,6 +375,7 @@ class App {
       mainContainer.classList.toggle("fade-away");
 
       imgContainer.style.display = "none";
+      imagesBox.style.display = "none";
 
       if (
         !navContainer.classList.contains("hidden") &&
@@ -402,6 +403,7 @@ class App {
     // FLAGS BUTTON
 
     const handleFlagsClick = function () {
+      imagesBox.style.display = "none";
       imgContainer.style.display = "none";
       flagsBtn.removeEventListener("click", handleFlagsClick);
       aboutContent.style.display = "none";
